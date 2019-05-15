@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <columnConstraints>
+        <ColumnConstraints />
+      <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+      <RowConstraints />
+    </rowConstraints>
+    <children>
+        <Pane prefHeight="700.0" prefWidth="800.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <children>
+                <ImageView fx:id="backGround" fitHeight="700.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+                    <effect>
+                        <Glow />
+                    </effect>
+                </ImageView>
+            <Label fx:id="character_lb0" layoutX="120.0" layoutY="50.0" prefHeight="39.0" prefWidth="200.0" text="Label 0">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Label fx:id="character_lb1" layoutX="120.0" layoutY="110.0" prefHeight="39.0" prefWidth="200.0" text="Label 1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="character_lb2" layoutX="120.0" layoutY="170.0" prefHeight="39.0" prefWidth="200.0" text="Label 2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="character_lb3" layoutX="120.0" layoutY="230.0" prefHeight="39.0" prefWidth="200.0" text="Label 3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="character_lb4" layoutX="120.0" layoutY="290.0" prefHeight="39.0" prefWidth="200.0" text="Label 4">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="character_lb5" layoutX="120.0" layoutY="350.0" prefHeight="39.0" prefWidth="200.0" text="Label 5">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="character_lb6" layoutX="120.0" layoutY="410.0" prefHeight="39.0" prefWidth="200.0" text="Label 6">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="character_lb7" layoutX="120.0" layoutY="470.0" prefHeight="39.0" prefWidth="200.0" text="Label 7">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="character_lb8" alignment="CENTER_RIGHT" layoutX="434.0" layoutY="50.0" prefHeight="39.0" prefWidth="200.0" text="Label 8">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="character_lb9" alignment="CENTER_RIGHT" layoutX="434.0" layoutY="110.0" prefHeight="39.0" prefWidth="200.0" text="Label 9">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="character_lb10" alignment="CENTER_RIGHT" layoutX="434.0" layoutY="170.0" prefHeight="39.0" prefWidth="200.0" text="Label 10">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="character_lb11" alignment="CENTER_RIGHT" layoutX="434.0" layoutY="230.0" prefHeight="39.0" prefWidth="200.0" text="Label 11">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="character_lb12" alignment="CENTER_RIGHT" layoutX="434.0" layoutY="290.0" prefHeight="39.0" prefWidth="200.0" text="Label 12">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="character_lb13" alignment="CENTER_RIGHT" layoutX="434.0" layoutY="350.0" prefHeight="39.0" prefWidth="200.0" text="Label 13">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="character_lb14" alignment="CENTER_RIGHT" layoutX="434.0" layoutY="410.0" prefHeight="39.0" prefWidth="200.0" text="Label 14">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="character_lb15" alignment="CENTER_RIGHT" layoutX="434.0" layoutY="470.0" prefHeight="39.0" prefWidth="200.0" text="Label 15">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="character_lb16" alignment="CENTER_RIGHT" layoutX="72.0" layoutY="550.0" prefHeight="39.0" prefWidth="200.0" text="Label 16">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="character_lb17" layoutX="513.0" layoutY="550.0" prefHeight="39.0" prefWidth="200.0" text="Label 17">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="submit_btn" layoutX="555.0" layoutY="632.0" mnemonicParsing="false" onAction="#generateCharacter" text="Button" />
+            <ChoiceBox fx:id="cb" layoutX="109.0" layoutY="634.0" prefWidth="150.0" />
+            <TextArea fx:id="urlTextEntry" layoutX="304.0" layoutY="627.0" prefHeight="18.0" prefWidth="226.0" promptText="Insert URL" />
+            <ImageView fx:id="Head" fitHeight="50.0" fitWidth="50.0" layoutX="60.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="Neck" fitHeight="50.0" fitWidth="50.0" layoutX="60.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="Shoulder" fitHeight="50.0" fitWidth="50.0" layoutX="60.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="Back" fitHeight="50.0" fitWidth="50.0" layoutX="60.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="Chest" fitHeight="50.0" fitWidth="50.0" layoutX="60.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="Shirt" fitHeight="50.0" fitWidth="50.0" layoutX="60.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="Tabard" fitHeight="50.0" fitWidth="50.0" layoutX="60.0" layoutY="405.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="Hands" fitHeight="50.0" fitWidth="50.0" layoutX="650.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="Waist" fitHeight="50.0" fitWidth="50.0" layoutX="650.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="Legs" fitHeight="50.0" fitWidth="50.0" layoutX="650.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="Feet" fitHeight="50.0" fitWidth="50.0" layoutX="650.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="Finger1" fitHeight="50.0" fitWidth="50.0" layoutX="650.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="Finger2" fitHeight="50.0" fitWidth="50.0" layoutX="650.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="Trinket1" fitHeight="50.0" fitWidth="50.0" layoutX="650.0" layoutY="405.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="Trinket2" fitHeight="50.0" fitWidth="50.0" layoutX="650.0" layoutY="465.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="MainHand" fitHeight="50.0" fitWidth="50.0" layoutX="290.0" layoutY="550.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="450.0" layoutY="550.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="Wrist" fitHeight="50.0" fitWidth="50.0" layoutX="60.0" layoutY="465.0" pickOnBounds="true" preserveRatio="true" />
+            </children>
+        </Pane>
+    </children>
+</GridPane>
