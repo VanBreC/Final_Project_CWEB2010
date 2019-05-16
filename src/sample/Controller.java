@@ -226,7 +226,8 @@ public class Controller {
         }
         int a = 0;
         int i = 0;
-        System.out.println(length1);
+        int b = 18 - length;
+        System.out.println(length);
 
 
 
@@ -236,16 +237,11 @@ public class Controller {
         //Back.setImage(new Image(armorEdit3.substring(2, armorEdit3.length()-3)));
         //Chest.setImage(new Image(armorEdit4.substring(2, armorEdit4.length()-3)));
 
-        while (a<=length){
+        while (a<length+b){
 
             while (!Gear.get(a).toString().contains(".jpg")) {
-                System.out.println("Not Loop   "+a);
-                System.out.println("Not Loop   "+i);
                 String armorEdit0 = Gear.get(a).attr("style").replace("background-image:url", "");
-                int b = 18 - (length+1);
-                if (a == (length+1)) {
-                    break;
-                } else if (aElement.get(a).attr("data-modal").contains("head")) {
+                if (aElement.get(a).attr("data-modal").contains("head")) {
                     Rectangle2D viewportRect = new Rectangle2D(0, -2, 50, 50);
                     Head.setImage((new Image(EmptySlot)));
                     Head.setViewport(viewportRect);
@@ -294,19 +290,27 @@ public class Controller {
                     character_lb7.setTextFill(Color.web("#ffffff"));
                     character_lb7.setText("Empty Slot");
                 }
+                if (a > length+b) {
+                    a++;
+                    break;
+                }
 
                 i = a - 1;
                 a++;
             }
+            System.out.println(aElement.get(14).attr("data-modal"));
+            System.out.println(aElement.get(15).attr("data-modal"));
+            System.out.println(aElement.get(16).attr("data-modal").contains("weapon"));
+            System.out.println(aElement.get(17).toString().contains("offhand"));
+
             System.out.println("Main Loop   "+a);
-            System.out.println("Main Loop   "+i);
             while (Gear.get(a).toString().contains(".jpg")) {
+
                 System.out.println("Yes Loop   "+a);
-                System.out.println("Yes Loop   "+i);
                 String armorEdit0 = Gear.get(a).attr("style").replace("background-image:url", "");
-                int b = 18 - (length+1);
-                System.out.println(b);
-                System.out.println("Yes Loop addition   "+ (a-b));
+                System.out.println("print a+b    " + (a-b));
+                System.out.println("print b     " + b);
+
                 if (aElement.get(a).attr("data-modal").contains("head")) {
                     Rectangle2D viewportRect = new Rectangle2D(0, 0, 0, 0);
                     Head.setImage(new Image(armorEdit0.substring(2, armorEdit0.length() - 3)));
@@ -853,6 +857,7 @@ public class Controller {
                     i++;
                     a++;
                 } else if (aElement.get(a).attr("data-modal").contains("weapon")) {
+                    System.out.println("weapon  "+a);
                     Rectangle2D viewportRect = new Rectangle2D(0, 0, 0, 0);
                     MainHand.setImage(new Image(armorEdit0.substring(2, armorEdit0.length() - 3)));
                     MainHand.setViewport(viewportRect);
@@ -886,7 +891,10 @@ public class Controller {
                     }
                     i++;
                     a++;
-                } else if (aElement.get(a).attr("data-modal").contains("offhand")) {
+
+                } else if (aElement.get(17).toString().contains("offhand")) {
+                    System.out.println("offhand");
+                    System.out.println(armorEdit0.substring(2, armorEdit0.length() - 3));
                     Rectangle2D viewportRect = new Rectangle2D(0, 0, 0, 0);
                     OffHand.setImage(new Image(armorEdit0.substring(2, armorEdit0.length() - 3)));
                     OffHand.setViewport(viewportRect);
@@ -920,11 +928,23 @@ public class Controller {
                     }
                     i++;
                     a++;
-                } else if (a - b == (length+1)) {
+
+                } else if (a > length+b+1){
+                    a++;
                     break;
+                } else {
+                    System.out.println("ERROR");
+                    i++;
+                    a++;
                 }
 
             }
+
+            if (a > length+b+1){
+                a++;
+                break;
+            }
+
         }
 
     }
